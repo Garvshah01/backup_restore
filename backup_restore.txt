@@ -1,0 +1,7 @@
+ -- use to backup the vinsol database in vinsol_backup.sql file
+mysqldump vinsol > vinsol_backup.sql -u root -p
+
+create database restored;
+
+-- use to restore the vinsol_backup.sql in restored database
+mysql restored < vinsol_backup.sql -u root -p
